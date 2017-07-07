@@ -1,5 +1,5 @@
 from sys import argv #python test2.py filename
-script, filename = argv
+script, filename,filename2 = argv
 
 print("Hello World!")
 #THIS IS A COMMENT
@@ -22,9 +22,18 @@ print (formatter % (domo,domo,domo,domo))
 txt = open(filename)
 print (txt.read())
 txt.close()
+txt2 =open("test2.txt",'w')
+txt2.truncate() #deletes all the data in the file
+txt2.write("That pepsi sure is fire!")
+txt2.close()
+
+#READING AND WRITTING
+txt = open(filename2)
+print (txt.read())
+txt.close()
 txt2 =open("test2_1.txt",'w')
 txt2.truncate() #deletes all the data in the file
-txt2.write("That pepsi sure is ice")
+txt2.write("That pepsi sure is ice!")
 txt2.close()
 
 the_count = [1, 2, 3, 4, 5]
